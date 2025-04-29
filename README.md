@@ -1,50 +1,164 @@
-# Welcome to your Expo app 👋
+## 📱 Spending Tracker App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A beautifully designed mobile application built with **React Native** that helps you track your monthly spendings and visualize your expenses using categorized icons like Netflix, Uber, Amazon, Spotify, and more.
 
-## Get started
+---
 
-1. Install dependencies
+### 🧰 Tech Stack
 
-   ```bash
-   npm install
-   ```
+- **React Native**
+- **TypeScript**
+- **Expo**
+- **React Navigation**
+- **React Native Vector Icons**
+- **SVG Icons (via `react-native-svg`)**
+- **React Native Gifted Charts**
+- **Custom Components & Styling with StyleSheet**
 
-2. Start the app
+---
 
-   ```bash
-    npx expo start
-   ```
+### 📦 Dependencies
 
-In the output, you'll find options to open the app in a
+Below is the list of major dependencies used in this project:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+| Package                                | Purpose                                           |
+|----------------------------------------|---------------------------------------------------|
+| `react-native`                         | Core framework for building native apps          |
+| `react-native-svg`                     | Rendering custom SVG icons                       |
+| `react-native-vector-icons`           | Feather, Ionicons & other vector icon sets       |
+| `expo`                                 | Build, preview, and deploy React Native apps     |
+| `@react-navigation/native`            | Navigation management                            |
+| `@react-navigation/native-stack`      | Stack navigation                                 |
+| `react-native-gifted-charts`          | **Visualizing expenses with stunning charts**    |
+| `typescript`                           | Type safety and development clarity              |
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+### 📊 React Native Gifted Charts
 
-When you're ready, run:
+This project uses [**React Native Gifted Charts**](https://github.com/giftedhealthcare/react-native-gifted-charts) to display visually appealing bar, line, and pie charts for expense analytics.
+
+#### 📦 Installation
 
 ```bash
-npm run reset-project
+npm install react-native-gifted-charts
+# or
+yarn add react-native-gifted-charts
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+This library supports a variety of charts including:
 
-## Learn more
+- **Bar Charts**
+- **Line Charts**
+- **Pie Charts**
+- **Progress Rings**
+- **Stacked Charts**
 
-To learn more about developing your project with Expo, look at the following resources:
+#### 💡 Usage Example
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+In this app, Gifted Charts is used to visualize **monthly category-wise spending** to help users easily understand where their money goes.
 
-## Join the community
+```tsx
+import { BarChart } from 'react-native-gifted-charts';
 
-Join our community of developers creating universal apps.
+<BarChart
+  data={[
+    { value: 200, label: 'Netflix' },
+    { value: 150, label: 'Spotify' },
+    { value: 300, label: 'Uber' },
+  ]}
+  frontColor="#FFA500"
+  barWidth={22}
+/>
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+#### 🧠 Benefits
+
+- Easy to integrate and customize
+- Clean and modern UI
+- Helpful for data analytics and spending summaries
+
+---
+
+### 🚀 Getting Started
+
+Follow these steps to clone, install, and run the project on your machine:
+
+#### 1. 📥 Clone the Repository
+
+```bash
+git clone https://github.com/<your-username>/<repo-name>.git
+cd <repo-name>
+```
+
+#### 2. 📦 Install Dependencies
+
+```bash
+npm install
+# OR
+yarn install
+```
+
+#### 3. ▶️ Run on Device or Emulator
+
+```bash
+npx expo start
+```
+
+Scan the QR using the **Expo Go** app or run it on an emulator.
+
+---
+
+### 📁 Project Structure
+
+```
+.
+├── assets/                 # SVG and image assets
+├── components/             # Reusable UI components like SpendingBlock
+├── constants/              # Theme colors and icons
+├── types/                  # TypeScript type definitions
+├── App.tsx                 # Entry point
+└── ...
+```
+
+---
+
+### 🎨 Features
+
+- ✅ Monthly spendings list with icons
+- ✅ Categorized services: Netflix, Uber, Amazon, Spotify, etc.
+- ✅ Real-time data rendering
+- ✅ Pie/Bar charts for spending visualization
+- ✅ Dark UI design with intuitive UX
+
+---
+
+### 🛠 Customize or Extend
+
+To add a new service:
+
+1. Add its SVG to `assets/icons/`
+2. Import it in `constants/Icons.ts`
+3. Update `SpendingBlock.tsx` to conditionally render it
+
+---
+
+### ❗Troubleshooting
+
+- ⚠️ Avoid nesting `FlatList` inside a `ScrollView`
+- ✅ Use `FlatList` or `SectionList` directly for better performance
+
+---
+
+### 🤝 Contributing
+
+Contributions are welcome! Feel free to fork and submit a pull request with enhancements.
+
+---
+
+### 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+<video controls src="Screen Recording 2025-04-30 031952.mp4" title="Title"></video>
