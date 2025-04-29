@@ -1,6 +1,6 @@
 ## 📱 Spending Tracker App
 
-A beautifully designed mobile application built with **React Native** that helps you track your monthly spending and visualize your expenses using categorized icons like Netflix, Uber, Amazon, Spotify, and more.
+A beautifully designed mobile application built with **React Native** that helps you track your monthly spendings and visualize your expenses using categorized icons like Netflix, Uber, Amazon, Spotify, and more.
 
 ---
 
@@ -12,6 +12,7 @@ A beautifully designed mobile application built with **React Native** that helps
 - **React Navigation**
 - **React Native Vector Icons**
 - **SVG Icons (via `react-native-svg`)**
+- **React Native Gifted Charts**
 - **Custom Components & Styling with StyleSheet**
 
 ---
@@ -24,13 +25,58 @@ Below is the list of major dependencies used in this project:
 |----------------------------------------|---------------------------------------------------|
 | `react-native`                         | Core framework for building native apps          |
 | `react-native-svg`                     | Rendering custom SVG icons                       |
-| `react-native-vector-icons`           | Vector icons (Feather, Ionicons, etc.)           |
-| `expo`                                 | Expo framework to run and build the app          |
-| `@react-navigation/native`            | App navigation handling                          |
-| `@react-navigation/native-stack`      | Stack-based navigation                           |
-| `typescript`                           | Type checking and cleaner development            |
+| `react-native-vector-icons`           | Feather, Ionicons & other vector icon sets       |
+| `expo`                                 | Build, preview, and deploy React Native apps     |
+| `@react-navigation/native`            | Navigation management                            |
+| `@react-navigation/native-stack`      | Stack navigation                                 |
+| `react-native-gifted-charts`          | **Visualizing expenses with stunning charts**    |
+| `typescript`                           | Type safety and development clarity              |
 
-Make sure you have these installed and configured properly (see below).
+---
+
+### 📊 React Native Gifted Charts
+
+This project uses [**React Native Gifted Charts**](https://github.com/giftedhealthcare/react-native-gifted-charts) to display visually appealing bar, line, and pie charts for expense analytics.
+
+#### 📦 Installation
+
+```bash
+npm install react-native-gifted-charts
+# or
+yarn add react-native-gifted-charts
+```
+
+This library supports a variety of charts including:
+
+- **Bar Charts**
+- **Line Charts**
+- **Pie Charts**
+- **Progress Rings**
+- **Stacked Charts**
+
+#### 💡 Usage Example
+
+In this app, Gifted Charts is used to visualize **monthly category-wise spending** to help users easily understand where their money goes.
+
+```tsx
+import { BarChart } from 'react-native-gifted-charts';
+
+<BarChart
+  data={[
+    { value: 200, label: 'Netflix' },
+    { value: 150, label: 'Spotify' },
+    { value: 300, label: 'Uber' },
+  ]}
+  frontColor="#FFA500"
+  barWidth={22}
+/>
+```
+
+#### 🧠 Benefits
+
+- Easy to integrate and customize
+- Clean and modern UI
+- Helpful for data analytics and spending summaries
 
 ---
 
@@ -47,8 +93,6 @@ cd <repo-name>
 
 #### 2. 📦 Install Dependencies
 
-Make sure you have Node.js and npm or yarn installed, then run:
-
 ```bash
 npm install
 # OR
@@ -57,15 +101,11 @@ yarn install
 
 #### 3. ▶️ Run on Device or Emulator
 
-##### Using Expo CLI:
-
-If you have Expo CLI installed:
-
 ```bash
 npx expo start
 ```
 
-This will launch Expo DevTools in your browser. Use the QR code to run the app on your physical device (with Expo Go app) or emulator.
+Scan the QR using the **Expo Go** app or run it on an emulator.
 
 ---
 
@@ -85,38 +125,34 @@ This will launch Expo DevTools in your browser. Use the QR code to run the app o
 
 ### 🎨 Features
 
-- ✅ Displays a list of monthly spendings
-- ✅ Categorized icons for popular services (Netflix, Uber, Amazon, Spotify)
-- ✅ Beautiful UI with dark-themed styling
-- ✅ Easily extensible for new services or features
+- ✅ Monthly spendings list with icons
+- ✅ Categorized services: Netflix, Uber, Amazon, Spotify, etc.
+- ✅ Real-time data rendering
+- ✅ Pie/Bar charts for spending visualization
+- ✅ Dark UI design with intuitive UX
 
 ---
 
 ### 🛠 Customize or Extend
 
-You can easily add more spending categories by:
+To add a new service:
 
-1. Importing the new SVG icon in `Icons.ts`
-2. Adding a new condition inside `SpendingBlock.tsx` like:
-
-```tsx
-else if (item.name === "Zomato") {
-  icon = <ZomatoIcon width={30} height={30} color={Colors.white} />;
-}
-```
+1. Add its SVG to `assets/icons/`
+2. Import it in `constants/Icons.ts`
+3. Update `SpendingBlock.tsx` to conditionally render it
 
 ---
 
 ### ❗Troubleshooting
 
-- If you see `VirtualizedLists should never be nested inside plain ScrollViews` warning, make sure you're **not nesting** a `FlatList` inside a `ScrollView` with the same orientation.
-- Use `SafeAreaView` or `ScrollView` only when necessary, and prefer `FlatList` or `SectionList` for rendering lists.
+- ⚠️ Avoid nesting `FlatList` inside a `ScrollView`
+- ✅ Use `FlatList` or `SectionList` directly for better performance
 
 ---
 
 ### 🤝 Contributing
 
-Pull requests and suggestions are welcome! Feel free to fork the repository and enhance it with animations, charts, or a database.
+Contributions are welcome! Feel free to fork and submit a pull request with enhancements.
 
 ---
 
@@ -126,4 +162,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-Let me know your GitHub repo name or link if you want the URL and references customized!
+Would you like me to convert this into an actual markdown file you can drop into your repo?
