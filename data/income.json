@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Salary",
+    "income": 50000
+  },
+  {
+    "id": 2,
+    "name": "Freelance",
+    "income": 60000
+  },
+  {
+    "id": 3,
+    "name": "Investments",
+    "income": 80000
+  },
+  {
+    "id": 4,
+    "name": "Interest",
+    "income": 110000
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "Netflix",
+    "amount": "499.49",
+    "date": "2025-04-29"
+  },
+  {
+    "id": 2,
+    "name": "Uber",
+    "amount": "1499.74",
+    "date": "2025-04-29"
+  },
+  {
+    "id": 3,
+    "name": "Amazon Prime",
+    "amount": "799.22",
+    "date": "2025-04-29"
+  },
+  {
+    "id": 6,
+    "name": "Dmart",
+    "amount": "2499.68",
+    "date": "2025-04-29"
+  },
+  {
+    "id": 10,
+    "name": "AirBnb",
+    "amount": "1999.99",
+    "date": "2025-04-29"
+  },
+  {
+    "id": 5,
+    "name": "Spotify Premium",
+    "amount": "199.52",
+    "date": "2025-04-29"
+  },
+  
+  {
+    "id": 7,
+    "name": "Metro Travel Pass",
+    "amount": "500.19",
+    "date": "2025-04-29"
+  },
+  {
+    "id": 9,
+    "name": "Figma",
+    "amount": "1299.11",
+    "date": "2025-04-29"
+  },
+  {
+    "id": 4,
+    "name": "YouTube Premium",
+    "amount": "89.36",
+    "date": "2025-04-29"
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "date": "2025-04-01",
+    "category": "Groceries",
+    "amount": "1200.75",
+    "payment_method": "UPI",
+    "note": "Monthly grocery shopping"
+  },
+  {
+    "id": 2,
+    "date": "2025-04-02",
+    "category": "Transport",
+    "amount": "150.50",
+    "payment_method": "Cash",
+    "note": "Auto fare to college"
+  },
+  {
+    "id": 3,
+    "date": "2025-04-03",
+    "category": "Dining",
+    "amount": "500.25",
+    "payment_method": "Card",
+    "note": "Lunch with friends"
+  },
+  {
+    "id": 4,
+    "date": "2025-04-04",
+    "category": "Recharge",
+    "amount": "299.99",
+    "payment_method": "Net Banking",
+    "note": "Phone recharge"
+  },
+  {
+    "id": 5,
+    "date": "2025-04-05",
+    "category": "Entertainment",
+    "amount": "800.45",
+    "payment_method": "Card",
+    "note": "Movie ticket and snacks"
+  },
+  {
+    "id": 6,
+    "date": "2025-04-06",
+    "category": "Medical",
+    "amount": "350.60",
+    "payment_method": "UPI",
+    "note": "Medicines"
+  },
+  {
+    "id": 7,
+    "date": "2025-04-07",
+    "category": "Utilities",
+    "amount": "1200.10",
+    "payment_method": "Net Banking",
+    "note": "Electricity bill"
+  }
+]
