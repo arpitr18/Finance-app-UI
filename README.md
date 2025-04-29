@@ -1,3 +1,4 @@
+![alt text](image.png)
 ## 📱 Spending Tracker App
 
 A beautifully designed mobile application built with **React Native** that helps you track your monthly spendings and visualize your expenses using categorized icons like Netflix, Uber, Amazon, Spotify, and more.
@@ -160,4 +161,3 @@ Contributions are welcome! Feel free to fork and submit a pull request with enha
 
 This project is licensed under the [MIT License](LICENSE).
 
-![alt text](image.png)
