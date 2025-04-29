@@ -160,5 +160,4 @@ Contributions are welcome! Feel free to fork and submit a pull request with enha
 
 This project is licensed under the [MIT License](LICENSE).
 
----
-<video controls src="Screen Recording 2025-04-30 031952.mp4" title="Title"></video>
+![alt text](image.png)
