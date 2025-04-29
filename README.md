@@ -1,50 +1,129 @@
-# Welcome to your Expo app 👋
+## 📱 Spending Tracker App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A beautifully designed mobile application built with **React Native** that helps you track your monthly spending and visualize your expenses using categorized icons like Netflix, Uber, Amazon, Spotify, and more.
 
-## Get started
+---
 
-1. Install dependencies
+### 🧰 Tech Stack
 
-   ```bash
-   npm install
-   ```
+- **React Native**
+- **TypeScript**
+- **Expo**
+- **React Navigation**
+- **React Native Vector Icons**
+- **SVG Icons (via `react-native-svg`)**
+- **Custom Components & Styling with StyleSheet**
 
-2. Start the app
+---
 
-   ```bash
-    npx expo start
-   ```
+### 📦 Dependencies
 
-In the output, you'll find options to open the app in a
+Below is the list of major dependencies used in this project:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+| Package                                | Purpose                                           |
+|----------------------------------------|---------------------------------------------------|
+| `react-native`                         | Core framework for building native apps          |
+| `react-native-svg`                     | Rendering custom SVG icons                       |
+| `react-native-vector-icons`           | Vector icons (Feather, Ionicons, etc.)           |
+| `expo`                                 | Expo framework to run and build the app          |
+| `@react-navigation/native`            | App navigation handling                          |
+| `@react-navigation/native-stack`      | Stack-based navigation                           |
+| `typescript`                           | Type checking and cleaner development            |
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Make sure you have these installed and configured properly (see below).
 
-## Get a fresh project
+---
 
-When you're ready, run:
+### 🚀 Getting Started
+
+Follow these steps to clone, install, and run the project on your machine:
+
+#### 1. 📥 Clone the Repository
 
 ```bash
-npm run reset-project
+git clone https://github.com/<your-username>/<repo-name>.git
+cd <repo-name>
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+#### 2. 📦 Install Dependencies
 
-## Learn more
+Make sure you have Node.js and npm or yarn installed, then run:
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+npm install
+# OR
+yarn install
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+#### 3. ▶️ Run on Device or Emulator
 
-## Join the community
+##### Using Expo CLI:
 
-Join our community of developers creating universal apps.
+If you have Expo CLI installed:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+npx expo start
+```
+
+This will launch Expo DevTools in your browser. Use the QR code to run the app on your physical device (with Expo Go app) or emulator.
+
+---
+
+### 📁 Project Structure
+
+```
+.
+├── assets/                 # SVG and image assets
+├── components/             # Reusable UI components like SpendingBlock
+├── constants/              # Theme colors and icons
+├── types/                  # TypeScript type definitions
+├── App.tsx                 # Entry point
+└── ...
+```
+
+---
+
+### 🎨 Features
+
+- ✅ Displays a list of monthly spendings
+- ✅ Categorized icons for popular services (Netflix, Uber, Amazon, Spotify)
+- ✅ Beautiful UI with dark-themed styling
+- ✅ Easily extensible for new services or features
+
+---
+
+### 🛠 Customize or Extend
+
+You can easily add more spending categories by:
+
+1. Importing the new SVG icon in `Icons.ts`
+2. Adding a new condition inside `SpendingBlock.tsx` like:
+
+```tsx
+else if (item.name === "Zomato") {
+  icon = <ZomatoIcon width={30} height={30} color={Colors.white} />;
+}
+```
+
+---
+
+### ❗Troubleshooting
+
+- If you see `VirtualizedLists should never be nested inside plain ScrollViews` warning, make sure you're **not nesting** a `FlatList` inside a `ScrollView` with the same orientation.
+- Use `SafeAreaView` or `ScrollView` only when necessary, and prefer `FlatList` or `SectionList` for rendering lists.
+
+---
+
+### 🤝 Contributing
+
+Pull requests and suggestions are welcome! Feel free to fork the repository and enhance it with animations, charts, or a database.
+
+---
+
+### 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+Let me know your GitHub repo name or link if you want the URL and references customized!
